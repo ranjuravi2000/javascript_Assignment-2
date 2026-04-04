@@ -1,64 +1,67 @@
+let result = document.getElementById("result");
+
 function getNumbers() {
     let a = Number(document.getElementById("num1").value);
     let b = Number(document.getElementById("num2").value);
     return [a, b];
 }
 
-function add() {
-    let values = getNumbers();
-    let a = values[0];
-    let b = values[1];
-    let result = a + b;
-    display(result);
+// display result
+function showResult(value) {
+    result.innerText = "Result: " + value;
 }
 
 
-function subtract() {
+document.getElementById("add").addEventListener("click", function () {
     let values = getNumbers();
     let a = values[0];
     let b = values[1];
-    let result = a - b;
-    display(result);
-}
+    let output = a + b;
+    showResult(output);
+});
 
 
-function multiply() {
+document.getElementById("sub").addEventListener("click", function () {
     let values = getNumbers();
     let a = values[0];
     let b = values[1];
-    let result = a * b;
-    display(result);
-}
+    let output = a - b;
+    showResult(output);
+});
 
 
-function divide() {
+document.getElementById("mul").addEventListener("click", function () {
+    let values = getNumbers();
+    let a = values[0];
+    let b = values[1];
+    let output = a * b;
+    showResult(output);
+});
+
+
+document.getElementById("div").addEventListener("click", function () {
     let values = getNumbers();
     let a = values[0];
     let b = values[1];
 
     if (b === 0) {
-        display("Can't divide by 0");
+        showResult("Cannot divide by 0");
     } else {
-        let result = a / b;
-        display(result);
+        let output = a / b;
+        showResult(output);
     }
-}
+});
 
 
-function square() {
+document.getElementById("square").addEventListener("click", function () {
     let a = Number(document.getElementById("num1").value);
-    let result = a * a;
-    display(result);
-}
+    let output = a * a;
+    showResult(output);
+});
 
 
-function cube() {
+document.getElementById("cube").addEventListener("click", function () {
     let a = Number(document.getElementById("num1").value);
-    let result = a * a * a;
-    display(result);
-}
-
-// Display result-----------
-function display(result) {
-    document.getElementById("result").innerText = "Result: " + result;
-}
+    let output = a * a * a;
+    showResult(output);
+});

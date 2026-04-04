@@ -12,16 +12,16 @@
     <div class="container">
         <h1>Calculator</h1>
 
-        <input type="number" id="num1" placeholder="Enter first number">
-        <input type="number" id="num2" placeholder="Enter second number">
+        <input type="number" id="num1" placeholder="Enter first number" required>
+        <input type="number" id="num2" placeholder="Enter second number" required>
 
         <div class="buttons">
-            <button onclick="add()">+</button>
-            <button onclick="subtract()">-</button>
-            <button onclick="multiply()">*</button>
-            <button onclick="divide()">/</button>
-            <button onclick="square()">x²</button>
-            <button onclick="cube()">x³</button>
+            <button id="add">+</button>
+            <button id="sub">-</button>
+            <button id="mul">*</button>
+            <button id="div">/</button>
+            <button id="square">x²</button>
+            <button id="cube">x³</button>
         </div>
 
         <h3 id="result">Result: </h3>
